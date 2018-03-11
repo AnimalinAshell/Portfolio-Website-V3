@@ -12,12 +12,13 @@ h2.titles {
     text-align: center;
     margin: 1.8em 0;
     text-transform: uppercase;
+    color: #424C55;
 }
 
 h2.titles:after {
     content: ' ';
     display: block;
-    border: 2px solid #000103;
+    border: 2px solid #424C55;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -37,7 +38,7 @@ div.home {
     position: relative;
 }
 #particles-js {
-    background-color: #333138;
+    background-color: #424C55;
     height: 100%;
     width:100%;
 }
@@ -101,7 +102,7 @@ nav.nav {
     padding: .8em 0 .8em 3.5em;
     font-family: 'Raleway',
     sans-serif;
-    background-color: #000103;
+    background-color: #333138;
     border-bottom: 3px solid #3E78B2;
 }
 nav.nav a {
@@ -142,7 +143,7 @@ div.about img.headShot {
     height: auto;
     width: 23vw;
     border-radius: 50%;
-    border: 2px solid #000103;
+    border: 2px solid #333138;
 }
 div.about p.aboutInfo {
     grid-column:  7 / 12;
@@ -157,7 +158,7 @@ div.about p.aboutInfo {
 /* SKILLS */
 div.skills {
     grid-column: 1 / -1;
-    background-color: #F5F5F5;
+    background-color: #E0E0E2;
 }
 div.skills h2 {
     grid-column: 1 / -1;
@@ -241,6 +242,28 @@ div.project img{
     width: 100%;
     height: 100%;
 }
+div.project a {
+    display: inline-block;
+    margin-top: 2em;
+    text-decoration: none;
+    color: #333138;
+    border: 1px solid #FF312E;
+    padding: .5em;
+    -webkit-transition: background-color .4s;
+    -o-transition: background-color .4s;
+    -ms-transition: background-color .4s;
+    -moz-transition: background-color .4s;
+    -webkit-transition: background-color .4s;
+}
+div.project a:hover {
+    background-color: #FF312E;
+    color: white;
+    -webkit-transition: background-color .4s;
+    -o-transition: background-color .4s;
+    -ms-transition: background-color .4s;
+    -moz-transition: background-color .4s;
+    -webkit-transition: background-color .4s;
+}
 #one {
     grid-column: 1 / 5;
 }
@@ -269,14 +292,14 @@ div.overlay {
     overflow: hidden;
     width: 100%;
     height: 0;
-    transition: .6s ease;
+    transition: .4s ease;
 }
 div.project:hover .overlay {
     height: 100%;
 }
 div.projectInfo {
-    color: black;
-    font-size: 2em;
+    color: #333138;
+    font-size: 1.5em;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -291,15 +314,30 @@ div.projectInfo span {
 /* CONTACT */
 div.contact {
     grid-column: 1 / -1;
-    background-color: #F5F5F5;
+    background-color: #424C55;
     display: grid;
     grid-template-columns: inherit;
 }
 div.contact h2 {
     grid-column: 1 / -1;
+    color: white;
+}
+div.contact h2.titles::after{
+    border: white 2px solid;
+}
+div.contact h5 {
+    color: #3E78B2;
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 0;
+    margin:0;
+    margin-bottom: 1.30em;
+    font-size: 1.4em;
+    font-weight: 300;
 }
 form {
-    grid-column: 4 / 10;   
+    grid-column: 5 / 9; 
+    justify-self: center;  
 }
 form input {
     width: 100%;
@@ -307,38 +345,48 @@ form input {
     margin-bottom: 1em;
     padding: .5em;
     box-sizing: border-box;
+    border: none;
 }
 form textarea {
     width: 100%;
     font-size: 1.4em;
     margin-bottom: 1em;
-    padding: .5em;
+    padding: .5em .5em 5em .5em;
     overflow: hidden;
     box-sizing: border-box;
+    border: none;
 }
 form button {
     margin-bottom: 5em;
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin: 0 auto 4em auto;
     display: block;
-    padding: .6em .8em .6em .8em;
+    padding: .5em .8em .5em .8em;
     background-color: #fff;
-    border: 1px solid black;
-    -webkit-transition: .4s;
-    transition: .4s;
-    -moz-transition: .4s;
-    -o-transition: .4s;
+    border: 1px solid #333138;
+    -webkit-transition: border .9s ease, background-color .9s ease;
+    transition: border .9s ease, background-color .9s ease;
+    -moz-transition: border .9s ease, background-color .9s ease;
+    -o-transition: border .9s ease, background-color .9s ease;
 }
 form button:hover {
     background-color: #3E78B2;
+    border: 1px solid #3E78B2;
     color:white;
-    -webkit-transition: .4s;
-    transition: .4s;
-    -moz-transition: .4s;
-    -o-transition: .4s;
+    -webkit-transition: border .4s ease, background-color .4s ease;
+    transition: border .4s ease, background-color .4s ease;
+    -moz-transition: border .4s ease, background-color .4s ease;
+    -o-transition: border .4s ease, background-color .4s ease;
 }
 /* FOOTER */
 footer {
     grid-column: 1 / -1;
     text-align: center;
+    background-color: #333138;
+    color: white;
+}
+
+footer p {
+    font-family: Raleway;
+    color: #E0E0E2;
 }
