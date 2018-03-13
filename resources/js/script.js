@@ -11,19 +11,23 @@ $(document).ready(function() {
     var sticky = new Waypoint.Sticky({ element: $(".nav")[0] });
     sticky.destroy();
     sticky = new Waypoint.Sticky({ element: $(".nav")[0] });
+    // Content animations that would get set off at the wrong time
+    $("#aboutTitle").waypoint({
+      handler: function (direction) {
+        $("#aboutTitle").removeClass("hidden");
+        $("#aboutTitle").addClass("animated fadeInLeft");
+      },
+      offset: "55%"
+    });
+    $("#aboutTitle").waypoint({
+      handler: function (direction) {
+        $(".headShot, .aboutInfo").removeClass("hidden");
+        $(".headShot").addClass("animated slideInUp");
+        $(".aboutInfo").addClass("animated slideInDown");
+      },
+      offset: "35%"
+    });
   }, 1000);
-
-  // Content animations that would get set off at the wrong time
-  $("#aboutTitle").waypoint({ handler: function(direction) {
-      $("#aboutTitle").removeClass("hidden");
-      $("#aboutTitle").addClass("animated fadeInLeft");
-    }, offset: "55%" });
-  $("#aboutTitle").waypoint({ handler: function(direction) {
-      $(".headShot, .aboutInfo").removeClass("hidden");
-      $(".headShot").addClass("animated slideInUp");
-      $(".aboutInfo").addClass("animated slideInDown");
-    }, offset: "35%" });
-
 });
 
 // Smooth scroll to content
