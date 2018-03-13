@@ -12,34 +12,42 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
 	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
 	<div class="container">
 
 		<!-- HOME -->
-		<div class="home">
+		<div class="home section">
 			<div id="particles-js"></div>
 			<div class="homeIntro">
 				<h1><span class="highlight">Manny Munoz</span></h1>
 				<h2>I'm a full-stack developer.</h2>
-				<p>View Portfolio <i class="fas fa-arrow-right"></i></p>
+				<nav>
+					<a href=".about">
+						<p>View Portfolio
+							<i class="fas fa-arrow-right"></i>
+						</p>
+					</a>
+				</nav>
+				
 			</div>
 		</div>
 
 		<!-- NAVIGATION -->
 		<nav class="nav">
-			<a href="">Home</a>
-			<a href="">About</a>
-			<a href="">Skills</a>
-			<a href="">Portfolio</a>
-			<a href="">Contact</a>
+			<a id="homeNav" class="active" href=".home">Home</a>
+			<a id="aboutNav" href=".about">About</a>
+			<a id="skillsNav" href=".skills">Skills</a>
+			<a id="portfolioNav" href=".portfolio">Portfolio</a>
+			<a id="contactNav" href=".contact">Contact</a>
 		</nav>
 
 		<!-- CONTENT -->
 		<div class="contentContainer">
 
 			<!-- ABOUT -->
-			<div class="about">
+			<div class="about section">
 				<h2 class="titles">About</h2>
 				<div class="aboutContent"></div>
 					<img class="headShot" src="resources/images/me.png" alt="Picture of Manny Munoz">
@@ -50,7 +58,7 @@
 			</div>
 
 			<!-- SKILLS -->
-			<div class="skills">
+			<div class="skills section">
 				<h2 class="titles">Skills</h2>
 				<div class="skillsContent">
 					<i class="devicon-html5-plain-wordmark"></i>
@@ -71,7 +79,7 @@
 			</div>
 
 			<!-- PORTFOLIO -->
-			<div class="portfolio">
+			<div class="portfolio section">
 				<h2 class="titles">Portfolio</h2>
 				<div class="portfolioContent">
 					<div id="one" class="project">
@@ -139,13 +147,13 @@
 			</div>
 
 			<!-- CONTACT -->
-			<div class="contact">
+			<div class="contact section">
 				<h2 class="titles">Contact</h2>
 				<h5>Feel free to reach out</h5>
-				<form class="contactForm" action="">
-					<input type="text" placeholder="Name..">
-					<input type="email" placeholder="Email..">
-					<textarea type="text" placeholder="Message.."></textarea>
+				<form class="contactForm" action="https://formspree.io/munoz.jeffrey95@yahoo.com" method="POST">
+					<input type="text" name="name" placeholder="Name..">
+					<input type="email" name="email" placeholder="Email..">
+					<textarea type="text" name="message" placeholder="Message.."></textarea>
 					<button>Submit</button>
 				</form>
 			</div>
@@ -153,10 +161,18 @@
 			<!-- FOOTER -->
 			<footer>
 				<div class="social">
-					<a href=""></a>
+					<a target="_blank" href="https://github.com/AnimalinAshell">
+						<i class="fab fa-github"></i>
+					</a>
+					<a target="_blank" href="https://www.freecodecamp.org/animalinashell">
+						<i class="fab fa-free-code-camp"></i>
+					</a>
+					<a target="_blank" href="https://www.linkedin.com/in/manny-munoz/	">
+						<i class="fab fa-linkedin-in"></i>	
+					</a>
 				</div>
 				<p>
-					Manny Munoz
+					Made with bare hands sorta
 					<span class="highlight">&copy;2018</span>
 				</p>
 			</footer>
@@ -164,7 +180,13 @@
 	</div>
 
 	<!-- SCRIPTS -->
-	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+	
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/sticky.min.js"></script>
+	
 	<script src="resources/js/script.js"></script>
 </body>
 </html>

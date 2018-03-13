@@ -29,13 +29,18 @@ h2.titles:after {
     margin: 0 auto;
     margin-top: .5em;
 }
-.highlight {
-    color: #FF312E;
+.highlight,
+.active {
+    color: #FF312E !important;
 }
 
 /* HOME */
 div.home {
     position: relative;
+}
+div.home a {
+    color: white;
+    text-decoration: none;
 }
 #particles-js {
     background-color: #424C55;
@@ -100,8 +105,7 @@ div.homeIntro p:hover i {
 /* NAVIGATION */
 nav.nav {
     padding: .8em 0 .8em 3.5em;
-    font-family: 'Raleway',
-    sans-serif;
+    font-family: 'Raleway', sans-serif;
     background-color: #333138;
     border-bottom: 3px solid #3E78B2;
 }
@@ -115,6 +119,12 @@ nav.nav a {
 nav.nav a:hover {
     color: #FF312E;
     transition: .45s;
+}
+nav.stuck {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
 }
 
 /* CONTENT CONTAINER */
@@ -357,9 +367,10 @@ form textarea {
     border: none;
 }
 form button {
+    color: #424C55;
     margin-bottom: 5em;
     font-size: 1.2em;
-    margin: 0 auto 4em auto;
+    margin: 1em auto 4.3em auto;
     display: block;
     padding: .5em .8em .5em .8em;
     background-color: #fff;
@@ -385,8 +396,33 @@ footer {
     background-color: #333138;
     color: white;
 }
-
-footer p {
+footer .social p {
     font-family: Raleway;
-    color: #E0E0E2;
+}
+footer .social a {
+   margin: 0 .6em;
+}
+footer .social {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+footer .social i.fab {
+    color: white;
+    border: 2px solid #424C55;
+    padding: .3em;
+    font-size: 2em;
+    -webkit-transition: color .6s ease;
+    transition: color .6s ease;
+    -moz-transition: color .6s ease;
+    -o-transition: color .6s ease;
+}
+footer .social i.fab:hover {
+    color: #FF312E;
+    -webkit-transition: color .4s ease;
+    transition: color .4s ease;
+    -moz-transition: color .4s ease;
+    -o-transition: color .4s ease;
+}
+footer p {
+    margin: 2em 0;
 }
