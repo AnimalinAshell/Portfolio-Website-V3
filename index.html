@@ -5,14 +5,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>WorldofManny</title>
-	<!-- LOCAL -->
-	<link rel="stylesheet" href="resources/css/style.css">
 	<!-- HOSTED -->
 	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
 	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<!-- LOCAL -->
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
 	<div class="container">
@@ -21,16 +25,15 @@
 		<div class="home section">
 			<div id="particles-js"></div>
 			<div class="homeIntro">
-				<h1><span class="highlight">Manny Munoz</span></h1>
-				<h2>I'm a full-stack developer.</h2>
+				<h1 class="animated fadeInLeft"><span class="highlight animate fadeInLeft">Manny Munoz</span></h1>
+				<h2 class="animated fadeInRight" >I'm a full-stack developer.</h2>
 				<nav>
 					<a href=".about">
-						<p>View Portfolio
+						<p class="animated fadeInUp">View Portfolio
 							<i class="fas fa-arrow-right"></i>
 						</p>
 					</a>
 				</nav>
-				
 			</div>
 		</div>
 
@@ -48,10 +51,10 @@
 
 			<!-- ABOUT -->
 			<div class="about section">
-				<h2 class="titles">About</h2>
+				<h2 id="aboutTitle" class="titles hidden">About</h2>
 				<div class="aboutContent"></div>
-					<img class="headShot" src="resources/images/me.png" alt="Picture of Manny Munoz">
-					<p class="aboutInfo">I'm a freelance developer consultant, I've created websites for local businesses and have operated my own online retail business. I value clean, responsive, and aesthetically beautiful designs.
+					<img class="headShot hidden" src="resources/images/me.png" alt="Picture of Manny Munoz">
+					<p class="aboutInfo hidden">I'm a freelance developer consultant, I've created websites for local businesses and have operated my own online retail business. I value clean, responsive, and aesthetically beautiful designs.
 					My skill set includes React, PHP, JS, CSS Grid, HTML5, CSS3, C# and similar technologies. I plan to move the world
 					forward one line at a time.
 				</p>
@@ -59,30 +62,31 @@
 
 			<!-- SKILLS -->
 			<div class="skills section">
-				<h2 class="titles">Skills</h2>
+				<h2 id="skillsTitle" class="titles hidden">Skills</h2>
 				<div class="skillsContent">
-					<i class="devicon-html5-plain-wordmark"></i>
-					<i class="devicon-css3-plain-wordmark"></i>
-					<i class="devicon-csharp-plain-wordmark"></i>
-					<i class="devicon-bootstrap-plain-wordmark"></i>
-					<i class="devicon-gimp-plain"></i>
-					<i class="devicon-git-plain"></i>
-					<i class="devicon-heroku-original-wordmark"></i>
-					<i class="devicon-javascript-plain"></i>
-					<i class="devicon-jquery-plain-wordmark"></i>
-					<i class="devicon-php-plain"></i>
-					<i class="devicon-react-original-wordmark"></i>
-					<i class="devicon-visualstudio-plain"></i>
-					<i class="devicon-webpack-plain"></i>
-					<i class="devicon-wordpress-plain"></i>
+					<i class="hidden devicon-html5-plain-wordmark"></i>
+					<i class="hidden devicon-css3-plain-wordmark"></i>
+					<i class="hidden devicon-csharp-plain-wordmark"></i>
+					<i class="hidden devicon-bootstrap-plain-wordmark"></i>
+					<i class="hidden devicon-gimp-plain"></i>
+					<i class="hidden devicon-git-plain"></i>
+					<i class="hidden devicon-heroku-original-wordmark"></i>
+					<i class="hidden devicon-javascript-plain"></i>
+					<i class="hidden devicon-jquery-plain-wordmark"></i>
+					<i class="hidden devicon-php-plain"></i>
+					<i class="hidden devicon-react-original-wordmark"></i>
+					<i class="hidden devicon-visualstudio-plain"></i>
+					<i class="hidden devicon-webpack-plain"></i>
+					<i class="hidden devicon-wordpress-plain"></i>
+					<i class="hidden icon-mssql"></i>
 				</div>
 			</div>
 
 			<!-- PORTFOLIO -->
 			<div class="portfolio section">
-				<h2 class="titles">Portfolio</h2>
+				<h2 id="portfolioTitle" class="titles hidden">Portfolio</h2>
 				<div class="portfolioContent">
-					<div id="one" class="project">
+					<div id="one" class="project hidden">
 						<img src="resources/images/elite.PNG" alt="Project Photo"
 						class="projectImage">
 						<div class="overlay">
@@ -93,7 +97,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="two" class="project">
+					<div id="two" class="project hidden">
 						<img src="resources/images/bs.PNG" alt="Project Photo" class="projectImage">
 						<div class="overlay">
 							<div class="projectInfo">
@@ -103,7 +107,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="three" class="project">
+					<div id="three" class="project hidden">
 						<img src="resources/images/oldportfolio.PNG" alt="Project Photo" class="projectImage">
 						<div class="overlay">
 							<div class="projectInfo">
@@ -113,7 +117,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="four" class="project">
+					<div id="four" class="project hidden">
 						<img src="resources/images/terminal.PNG" alt="Project Photo" class="projectImage">
 						<div class="overlay">
 							<div class="projectInfo">
@@ -123,7 +127,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="five" class="project">
+					<div id="five" class="project hidden">
 						<img src="resources/images/weather.PNG" alt="Project Photo" class="projectImage">
 						<div class="overlay">
 							<div class="projectInfo">
@@ -133,7 +137,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="six" class="project">
+					<div id="six" class="project hidden">
 						<img src="resources/images/color.PNG" alt="Project Photo" class="projectImage">
 						<div class="overlay">
 							<div class="projectInfo">
@@ -148,9 +152,9 @@
 
 			<!-- CONTACT -->
 			<div class="contact section">
-				<h2 class="titles">Contact</h2>
-				<h5>Feel free to reach out</h5>
-				<form class="contactForm" action="https://formspree.io/munoz.jeffrey95@yahoo.com" method="POST">
+				<h2 id="contactTitle" class="titles hidden">Contact</h2>
+				<h5 class="hidden">Feel free to reach out</h5>
+				<form class="contactForm hidden" action="https://formspree.io/munoz.jeffrey95@yahoo.com" method="POST">
 					<input type="text" name="name" placeholder="Name..">
 					<input type="email" name="email" placeholder="Email..">
 					<textarea type="text" name="message" placeholder="Message.."></textarea>
@@ -172,7 +176,7 @@
 					</a>
 				</div>
 				<p>
-					Made with bare hands sorta
+					Manuel Munoz
 					<span class="highlight">&copy;2018</span>
 				</p>
 			</footer>
@@ -181,7 +185,7 @@
 
 	<!-- SCRIPTS -->
 	
-	
+	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
