@@ -517,6 +517,7 @@ footer .social p {
 }
 footer .social a {
    margin: 0 .6em;
+   text-decoration: none;
 }
 footer .social {
     margin-top: 3em;
