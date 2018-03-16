@@ -543,3 +543,18 @@ footer .social i.fab:hover {
 footer p {
     margin: 2em 0;
 }
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 850px) {
+    div.homeIntro{
+        font-size: 1em;
+    }
+    div.aboutContent img {
+        grid-column: 1 / -1;
+    }
+}
+@media only screen and (max-width: 700px) {
+    nav.nav a {
+        font-size: 1em;
+    }
+}
