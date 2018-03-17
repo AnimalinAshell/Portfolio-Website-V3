@@ -5,7 +5,7 @@ body, html {
     font-family: 'Lora', serif;
 }
 
-/*MAIN CONTAINER*/ 
+/*MAIN CONTAINER ------------------------------------------------*/ 
 h2.titles {
     font-family: 'Raleway', sans-serif;
     font-size: 2.7em;
@@ -37,7 +37,7 @@ h2.titles:after {
     opacity: 0;
 }
 
-/* HOME */
+/* HOME ----------------------------------------------------*/
 div.home {
     position: relative;
     display: block;
@@ -113,7 +113,7 @@ div.homeIntro p:hover i {
     -webkit-transition: transform .5s;    
 }
 
-/* NAVIGATION */
+/* NAVIGATION ----------------------------------------------------*/
 nav.nav {
     padding: .8em 0 .8em 3.5em;
     font-family: 'Raleway', sans-serif;
@@ -138,14 +138,14 @@ nav.stuck {
     width: 100%;
 }
 
-/* CONTENT CONTAINER */
+/* CONTENT CONTAINER -----------------------------------------*/
 div.contentContainer {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, auto);
 }
 
-/* ABOUT */
+/* ABOUT -----------------------------------------------------*/
 div.about {
     grid-column: 1 / -1;
     display:grid;
@@ -158,6 +158,7 @@ div.about h2{
 div.aboutContent {
     display:grid;
     grid-template-columns: inherit;
+    grid-template-rows: auto, auto, auto;
 }
 div.about img.headShot {
     grid-column: 2 / 5;
@@ -176,7 +177,7 @@ div.about p.aboutInfo {
     padding: 1em;
 }
 
-/* SKILLS */
+/* SKILLS --------------------------------------------------*/
 div.skills {
     grid-column: 1 / -1;
     background-color: #E0E0E2;
@@ -321,7 +322,7 @@ i.icon-mssql {
     -moz-animation-delay: .7s;
 }
 
-/* PORTFOLIO */
+/* PORTFOLIO ----------------------------------------------*/
 div.portfolio {
     grid-column: 1 / -1;
 }
@@ -437,7 +438,7 @@ div.projectInfo span {
     display: block;
     font-size: .6em;
 }
-/* CONTACT */
+/* CONTACT ---------------------------------------------------*/
 div.contact {
     grid-column: 1 / -1;
     background-color: #424C55;
@@ -505,7 +506,7 @@ form button:hover {
     -moz-transition: border .4s ease, background-color .4s ease;
     -o-transition: border .4s ease, background-color .4s ease;
 }
-/* FOOTER */
+/* FOOTER -------------------------------------------------------*/
 footer {
     grid-column: 1 / -1;
     text-align: center;
@@ -544,17 +545,173 @@ footer p {
     margin: 2em 0;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES ---------------------------------------------*/
 @media only screen and (max-width: 850px) {
     div.homeIntro{
+        font-size: .7em;
+        top: 20%;
+    }
+    div.about img.headShot {
+        grid-column: 1 / -1;
+        margin: 0 auto;
+        justify-content: center;
+        width: 50vw;
+        height: auto;
+        margin-bottom: 2em;
+    }
+
+    div.about p.aboutInfo {
+        grid-column: 1 / -1;
+        width: 75vw;
+        margin: 0 auto;
         font-size: 1em;
     }
-    div.aboutContent img {
-        grid-column: 1 / -1;
+
+    div.skills div.skillsContent i {
+        font-size: 2em;
     }
+
+    i.devicon-html5-plain-wordmark {
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+    }
+
+    i.devicon-css3-plain-wordmark {
+        grid-column: 4 / 6;
+        grid-row: 1 / 2;
+    }
+
+    i.devicon-csharp-plain-wordmark {
+        grid-column: 8 / 10;
+        grid-row: 1 / 2;
+    }
+
+    i.devicon-bootstrap-plain-wordmark {
+        grid-column: 6 / 8;
+        grid-row: 1 / 2;
+    }
+
+    i.devicon-gimp-plain {
+        grid-column: 10 / 12;
+        grid-row: 1 / 2;
+    }
+
+    i.devicon-git-plain {
+        grid-column: 8 / 10;
+        grid-row: 3 / 4;
+    }
+
+    i.devicon-heroku-original-wordmark {
+        grid-column: 10 / 12;
+        grid-row: 3 / 4;
+    }
+
+    i.devicon-javascript-plain {
+        grid-column: 4 / 6;
+        grid-row: 2 / 3;
+    }
+
+    i.devicon-jquery-plain-wordmark {
+        grid-column: 2 / 4;
+        grid-row: 3 / 4;
+    }
+
+    i.devicon-php-plain {
+        grid-column: 6 / 8;
+        grid-row: 2 / 3;
+    }
+
+    i.devicon-react-original-wordmark {
+        grid-column: 8 / 10;
+        grid-row: 2 / 3;
+    }
+
+    i.devicon-visualstudio-plain {
+        grid-column: 10 / 12;
+        grid-row: 2 / 3;
+    }
+
+    i.devicon-webpack-plain {
+        grid-column: 6 / 8;
+        grid-row: 3 / 4;
+    }
+
+    i.devicon-wordpress-plain {
+        grid-column: 4 / 6;
+        grid-row: 3 / 4;
+    }
+
+    i.icon-mssql {
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+    }
+    #one {
+        grid-column: 1 / 7;
+    }
+
+    #two {
+        grid-column: 7 / 13;
+    }
+
+    #three {
+        grid-column: 1 / 7;
+    }
+
+    #four {
+        grid-column: 7 / 13;
+    }
+
+    #five {
+        grid-column: 1 / 7;
+    }
+
+    #six {
+        grid-column: 7 / 13;
+    }
+
 }
 @media only screen and (max-width: 700px) {
     nav.nav a {
-        font-size: 1em;
+        font-size: .7em;
+        padding: 0 .2em;
+    }
+    nav.nav {
+        padding: .5em 1em;
+    }
+}
+@media only screen and (max-width: 430px) {
+    h2.titles {
+        font-size: 2.2em;
+        margin: 1.4em 0;
+    }
+    div.portfolioContent {
+        display: grid;
+        margin-bottom: 5em;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, auto);
+        padding: 0;
+    }
+    #one {
+        grid-column: 1 / -1;
+    }
+
+    #two {
+        grid-column: 1 / -1;
+    }
+
+    #three {
+        grid-column: 1 / -1;
+    }
+
+    #four {
+        grid-column: 1 / -1;
+    }
+
+    #five {
+        grid-column: 1 / -1;
+    }
+
+    #six {
+        grid-column: 1 / -1;
     }
 }
